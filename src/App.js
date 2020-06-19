@@ -58,7 +58,10 @@ class App extends Component {
                     handleKeyPress={this.handleKeyPress}
                     handleInputChange={this.handleInputChange}
                     />
-                <ResultList results={this.state.results} /> 
+                <ResultList 
+                results={this.state.results}
+                repos={this.state.repos} 
+                 /> 
             </div>
         )
     }
