@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
 import SearchForm from './components/SearchForm/index'
-import ResultList from './components/SearchForm/index'
+import ResultList from './components/ResultList/index'
 import API from './utils/API'
 
 class App extends Component {
     state = {
         username: "",
-        results: []
+        results: {}
       };
     
-      // When this component mounts, search the Giphy API for pictures of kittens
+
       componentDidMount() {
-        this.getUser("PhoebeYahengWu");
+        this.searchProfile("PhoebeYahengWu");
       }
     
       searchProfile = query => {
@@ -30,12 +30,16 @@ class App extends Component {
       };
     
 
+      handleFormSubmit = event => {
+          event.preventDefault();
+          this.searchProfile(this.state.username)
+      }
 
     render() {
         return (
             <div>
                 <SearchForm
-                    search={this.state.search}
+                    username={this.state.username}
                     handleFormSubmit={this.handleFormSubmit}
                     handleInputChange={this.handleInputChange}
                     />
