@@ -16,8 +16,7 @@ class App extends Component {
     
       searchProfile = query => {
         API.getUser(query)
-          .then(res => console.log(res))
-          .then(res => this.setState({ results: res.data.data }))
+          .then(res => this.setState({ results: res.data }))
           .catch(err => console.log(err));
       };
     
@@ -49,7 +48,7 @@ class App extends Component {
                     handleKeyPress={this.handleKeyPress}
                     handleInputChange={this.handleInputChange}
                     />
-                <ResultList results={this.state.results} />
+                <ResultList results={this.state.results} /> 
             </div>
         )
     }

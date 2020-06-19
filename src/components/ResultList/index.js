@@ -1,15 +1,47 @@
 import React from "react";
+import './style.css'
 
 function ResultList(props) {
   return (
-    <ul className="list-group search-results">
-      {props.results.map(result => (
-        <li key={result} className="list-group-item">
-          <img alt="Profile" src={result} className="img-fluid" />
-        </li>
-      ))}
-    </ul>
+    <div className="container-fluid">
+        <div className="card mt-3">
+            <div className="card-header pb-0 mb-0">
+                <h3 className="card-title">{props.results.name}</h3>
+            </div>
+
+            <div className="card-body pb-0 mb-0">
+                <div className="row">
+                    <div className="col-md-3">
+            
+                    <img alt="avatar" style={{width:"100%"}} className="thumbnail" src={props.results.avatar_url}></img>
+                        <a id="viewProfile" className="btn waves-effect btn-dark btn-block mt-2" href={props.results.html_url}>View Profile</a>
+
+                    </div>
+
+                    <div className="col-md-9">
+                                <div className="row justify-content-center mt-2 mb-2">
+                                <span className="badge #4db6ac teal lighten-2 white-text">Public Repos: {props.results.public_repos}</span>
+                                <span className="badge #4db6ac teal lighten-2 white-text">Followers: {props.results.followers}</span>
+                                <span className="badge #4db6ac teal lighten-2 white-text">Following: {props.results.following}</span> 
+                                </div>
+                                <ul className="list-group">
+                                    <li className="list-group-item">Compnay: {props.results.company}</li>
+                                    <li className="list-group-item">Website/Blog: {props.results.blog}</li>
+                                    <li className="list-group-item">Location: {props.results.location}</li>
+                                    <li className="list-group-item">Member Since: {props.results.created_at}</li>
+                                    <li className="list-group-item">Last Profile Update: {props.results.updated_at}</li>
+                                    <li className="list-group-item">Profile Bio: {props.results.bio}</li>
+                                </ul>
+                            </div> 
+
+                </div>
+            </div>
+
+        </div>
+    </div>
   );
-}
+};
 
 export default ResultList;
+
+

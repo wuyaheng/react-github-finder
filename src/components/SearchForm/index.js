@@ -3,7 +3,7 @@ import React from 'react'
 function SearchForm(props) {
     return (
     <nav>
-        <div class="nav-wrapper">
+        <div className="nav-wrapper">
         <form>
         <div className="input-field">
           <input
@@ -14,7 +14,7 @@ function SearchForm(props) {
             type="search"
             placeholder="Search For Another GitHub User"
             id="search"
-            autocomplete="off"
+            autoComplete="off"
           />
            <label className="label-icon" for="search"><i className="material-icons">search</i></label>
            <i className="material-icons">close</i>
