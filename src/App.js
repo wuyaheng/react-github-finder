@@ -6,7 +6,7 @@ import API from './utils/API'
 class App extends Component {
     state = {
         username: "",
-        results: {}
+        results: []
       };
     
 
@@ -29,6 +29,11 @@ class App extends Component {
         });
       };
     
+      handleKeyPress = event => {
+        if (event.key === 'Enter') {
+          this.searchProfile(this.state.username);
+        }
+      };
 
       handleFormSubmit = event => {
           event.preventDefault();
@@ -41,6 +46,7 @@ class App extends Component {
                 <SearchForm
                     username={this.state.username}
                     handleFormSubmit={this.handleFormSubmit}
+                    handleKeyPress={this.handleKeyPress}
                     handleInputChange={this.handleInputChange}
                     />
                 <ResultList results={this.state.results} />

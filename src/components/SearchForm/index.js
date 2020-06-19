@@ -2,23 +2,26 @@ import React from 'react'
 
 function SearchForm(props) {
     return (
+    <nav>
+        <div class="nav-wrapper">
         <form>
-        <div className="form-group">
+        <div className="input-field">
           <input
             onChange={props.handleInputChange}
+            onKeyPress={props.handleKeyPress}
             value={props.value}
             name="username"
-            type="text"
-            className="form-control"
+            type="search"
             placeholder="Search For Another GitHub User"
             id="search"
+            autocomplete="off"
           />
-          <br />
-          <button onClick={props.handleFormSubmit} className="btn btn-dark">
-            Search
-          </button>
+           <label className="label-icon" for="search"><i className="material-icons">search</i></label>
+           <i className="material-icons">close</i>
         </div>
       </form>
+      </div>
+    </nav>
     )
 }
 
