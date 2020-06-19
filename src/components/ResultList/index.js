@@ -26,7 +26,7 @@ function ResultList(props) {
                                 </div>
                                 <ul className="list-group">
                                     <li className="list-group-item">Compnay: {props.results.company}</li>
-                                    <li className="list-group-item">Website/Blog: {props.results.blog}</li>
+                                    <li className="list-group-item">Website/Blog: <a href={props.results.blog}>{props.results.blog}</a></li>
                                     <li className="list-group-item">Location: {props.results.location}</li>
                                     <li className="list-group-item">Member Since: {props.results.created_at}</li>
                                     <li className="list-group-item">Last Profile Update: {props.results.updated_at}</li>
