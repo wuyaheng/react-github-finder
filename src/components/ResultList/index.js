@@ -3,6 +3,7 @@ import './style.css'
 
 function ResultList(props) {
   return (
+    <>
     <div className="container-fluid">
         <div className="card mt-3">
             <div className="card-header pb-0 mb-0">
@@ -39,6 +40,24 @@ function ResultList(props) {
 
         </div>
     </div>
+
+
+        <div className="container-fluid">
+                <div className="card mt-3">
+                    <div className="card-header">
+                        <h3 className="card-title">Latest Repos</h3> 
+                    </div>
+
+                    <div className="card-body mb-0 pb-0">
+                        <div className="row mb-0 pb-0">
+                            <div id="repos" className="col s12 mb-0 pb-0">
+
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </>
   );
 };
 
