@@ -6,12 +6,14 @@ import API from './utils/API'
 class App extends Component {
     state = {
         username: "",
-        results: []
+        results: [],
+        repos: []
       };
     
 
       componentDidMount() {
         this.searchProfile("PhoebeYahengWu");
+        this.searchProfileRepos("PhoebeYahengWu")
       }
     
       searchProfile = query => {
@@ -19,6 +21,12 @@ class App extends Component {
           .then(res => this.setState({ results: res.data }))
           .catch(err => console.log(err));
       };
+
+      searchProfileRepos = query => {
+        API.getRepo(query)
+        .then(res => this.setState({ repos: res.data}))
+        .catch(err => console.log(err));
+      }
     
       handleInputChange = event => {
         const name = event.target.name;
@@ -30,13 +38,15 @@ class App extends Component {
     
       handleKeyPress = event => {
         if (event.key === 'Enter') {
-          this.searchProfile(this.state.username);
+          this.searchProfile(this.state.username)
+          this.searchProfileRepos(this.state.username)
         }
       };
 
       handleFormSubmit = event => {
           event.preventDefault();
           this.searchProfile(this.state.username)
+          this.searchProfileRepos(this.state.username)
       }
 
     render() {

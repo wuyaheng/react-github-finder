@@ -52,6 +52,19 @@ function ResultList(props) {
                         <div className="row mb-0 pb-0">
                             <div id="repos" className="col s12 mb-0 pb-0">
 
+                            {props.repos? props.repos.map(repo => 
+                                <div className="row">
+                                    <div className="col s12"> 
+                                <div className="card">
+                                    <div className="card-content">
+                                        <strong>{repo.name}</strong><br/>
+                                        <p>Description: {repo.description}</p>
+                                        <a href={repo.html_url}>{repo.html_url}</a> 
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                            ): <p>No repo available!</p>}
                             </div> 
                         </div>
                     </div>
