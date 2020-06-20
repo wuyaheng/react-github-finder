@@ -26,7 +26,7 @@ function ResultList(props) {
                                 <span className="badge badge-success p-1 m-1">Following: {props.results.following}</span> 
                                 </div>
                                 <ul className="list-group">
-                                    <li className="list-group-item">Compnay: {props.results.company}</li>
+                                    <li className="list-group-item">Company: {props.results.company}</li>
                                     <li className="list-group-item">Website/Blog: {props.results.blog}</li>
                                     <li className="list-group-item">Location: {props.results.location}</li>
                                     <li className="list-group-item">Member Since: {props.results.created_at}</li>
