@@ -21,7 +21,7 @@ function ResultList(props) {
                     </div>
 
                     <div className="col-md-9 pb-3">
-                                <div className="row justify-content-center mt-2 mb-2">
+                                <div className="row justify-content-center mb-2">
                                 <span className="badge badge-primary p-1 m-1">Public Repos: {props.results.public_repos}</span>
                                 <span className="badge badge-secondary p-1 m-1">Followers: {props.results.followers}</span>
                                 <span className="badge badge-success p-1 m-1">Following: {props.results.following}</span> 
