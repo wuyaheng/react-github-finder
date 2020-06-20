@@ -12,7 +12,7 @@ function ResultList(props) {
 
             <div className="card-body pb-0 mb-0">
                 <div className="row">
-                    <div className="col-md-3">
+                    <div className="col-md-3 pb-3">
             
                     <img alt="avatar" style={{width:"100%"}} className="thumbnail" src={props.results.avatar_url}></img>
                         <a id="viewProfile" className="btn waves-effect btn-dark btn-block mt-2" href={props.results.html_url}>View Profile</a>
@@ -21,9 +21,9 @@ function ResultList(props) {
 
                     <div className="col-md-9">
                                 <div className="row justify-content-center mt-2 mb-2">
-                                <span className="badge #4db6ac teal lighten-2 white-text">Public Repos: {props.results.public_repos}</span>
-                                <span className="badge #4db6ac teal lighten-2 white-text">Followers: {props.results.followers}</span>
-                                <span className="badge #4db6ac teal lighten-2 white-text">Following: {props.results.following}</span> 
+                                <span className="badge badge-primary p-1 m-1">Public Repos: {props.results.public_repos}</span>
+                                <span className="badge badge-secondary p-1 m-1">Followers: {props.results.followers}</span>
+                                <span className="badge badge-success p-1 m-1">Following: {props.results.following}</span> 
                                 </div>
                                 <ul className="list-group">
                                     <li className="list-group-item">Compnay: {props.results.company}</li>
@@ -50,13 +50,13 @@ function ResultList(props) {
 
                     <div className="card-body mb-0 pb-0">
                         <div className="row mb-0 pb-0">
-                            <div id="repos" className="col s12 mb-0 pb-0">
+                            <div id="repos" className="col col-md-12 mb-0 pb-0">
 
                             {props.repos? props.repos.map(repo => 
                                 <div className="row">
-                                    <div className="col s12"> 
-                                <div className="card">
-                                    <div className="card-content">
+                                    <div className="col col-md-12"> 
+                                <div className="card m-2">
+                                    <div className="card-content p-3">
                                         <strong>{repo.name}</strong><br/>
                                         <p>Description: {repo.description}</p>
                                         <a href={repo.html_url}>{repo.html_url}</a> 

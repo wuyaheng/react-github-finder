@@ -15,7 +15,7 @@ function SearchForm(props) {
           id="search"
         />
         <div className="input-group-append">
-        <button onClick={props.handleFormSubmit} className="btn btn-info">
+        <button onClick={props.handleFormSubmit} className="btn btn-dark">
           Search
         </button>
         </div>
