@@ -13,7 +13,7 @@ function ResultList(props) {
 
             <div className="card-body pb-0 mb-0">
                 <div className="row">
-                    <div className="col-md-3 pb-3">
+                    <div className="col-md-3 pb-2">
             
                     <img alt="avatar" style={{width:"100%"}} className="thumbnail" src={props.results.avatar_url}></img>
                         <a id="viewProfile" className="btn waves-effect btn-dark btn-block mt-2" href={props.results.html_url}>View Profile</a>
