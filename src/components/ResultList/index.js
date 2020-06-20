@@ -19,7 +19,7 @@ function ResultList(props) {
 
                     </div>
 
-                    <div className="col-md-9">
+                    <div className="col-md-9 pb-3">
                                 <div className="row justify-content-center mt-2 mb-2">
                                 <span className="badge badge-primary p-1 m-1">Public Repos: {props.results.public_repos}</span>
                                 <span className="badge badge-secondary p-1 m-1">Followers: {props.results.followers}</span>
@@ -27,7 +27,7 @@ function ResultList(props) {
                                 </div>
                                 <ul className="list-group">
                                     <li className="list-group-item">Compnay: {props.results.company}</li>
-                                    <li className="list-group-item">Website/Blog: <a href={props.results.blog}>{props.results.blog}</a></li>
+                                    <li className="list-group-item">Website/Blog: {props.results.blog}</li>
                                     <li className="list-group-item">Location: {props.results.location}</li>
                                     <li className="list-group-item">Member Since: {props.results.created_at}</li>
                                     <li className="list-group-item">Last Profile Update: {props.results.updated_at}</li>
