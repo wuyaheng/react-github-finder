@@ -29,24 +29,19 @@ class App extends Component {
       }
     
       handleInputChange = event => {
-        const name = event.target.name;
-        const value = event.target.value;
+        let value = event.target.value;
         this.setState({
-          [name]: value
+          username: value
         });
-      };
-    
-      handleKeyPress = event => {
-        if (event.key === 'Enter') {
-          this.searchProfile(this.state.username)
-          this.searchProfileRepos(this.state.username)
-        }
       };
 
       handleFormSubmit = event => {
           event.preventDefault();
           this.searchProfile(this.state.username)
           this.searchProfileRepos(this.state.username)
+          this.setState({
+            username: ''
+          });
       }
 
     render() {
@@ -55,7 +50,6 @@ class App extends Component {
                 <SearchForm
                     username={this.state.username}
                     handleFormSubmit={this.handleFormSubmit}
-                    handleKeyPress={this.handleKeyPress}
                     handleInputChange={this.handleInputChange}
                     />
                 <ResultList 
