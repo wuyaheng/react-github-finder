@@ -1,4 +1,9 @@
-#search:focus {
+button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+input:focus {
     outline: none !important;
     box-shadow: none !important;
 }
