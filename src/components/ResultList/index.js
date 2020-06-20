@@ -1,4 +1,5 @@
 import React from "react";
+import moment from 'moment'
 import './style.css'
 
 function ResultList(props) {
@@ -29,8 +30,8 @@ function ResultList(props) {
                                     <li className="list-group-item">Company: {props.results.company}</li>
                                     <li className="list-group-item">Website/Blog: {props.results.blog}</li>
                                     <li className="list-group-item">Location: {props.results.location}</li>
-                                    <li className="list-group-item">Member Since: {props.results.created_at}</li>
-                                    <li className="list-group-item">Last Profile Update: {props.results.updated_at}</li>
+                                    <li className="list-group-item">Member Since: {moment(props.results.created_at).format("MMM Do YYYY")}</li>
+                                    <li className="list-group-item">Last Profile Update: {moment(props.results.updated_at).format("MMM Do YYYY")}</li>
                                     <li className="list-group-item">Profile Bio: {props.results.bio}</li>
                                 </ul>
                             </div> 
