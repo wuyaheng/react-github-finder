@@ -1,6 +1,6 @@
 
 # React GitHub Finder
-![github finder](https://user-images.githubusercontent.com/52837649/86247400-66018000-bb7a-11ea-817d-694c5c353fb9.gif)
+![last](https://user-images.githubusercontent.com/52837649/86248012-474fb900-bb7b-11ea-9788-9a573aa09714.gif)
 
 ## Description
 A simple react application that allows users to search for GitHub profile and repos of other GitHub accounts.
