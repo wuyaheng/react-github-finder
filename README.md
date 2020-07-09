@@ -7,33 +7,26 @@ GitHub Finder is a simple react application that allows users to fetch the GitHu
 
 ## Table of Contents
 
-* Tech/Framework Used
+* [Tech/Framework Used](#TechUsed)
 
-* Usage
+* [link](#Link)
 
-* Contributor
+* [Usage](#usage)
 
-* links
-
-* Questions
+* [Questions](#Questions)
 
 
-## Tech/Framework Used
+## TechUsed
 React, Bootstrap, API
 
+## Link
+https://react-github-profile-finder.herokuapp.com/
 
 ## Usage
 Enter the username of the other GitHub account in the search box and press enter key.
 
-## Contributor
-Phoebe Yaheng Wu
-
-
-## Link to project URL
-https://react-github-profile-finder.herokuapp.com/
-
-
 ## Questions
+![user profile image](https://avatars0.githubusercontent.com/u/52837649?v=4)
 
-For questions about the project contact PhoebeYahengWu or directly at wuyaheng2016@gmail.com
+For questions about the project contact PhoebeYahengWu or directly at wuyaheng2016@gmail.com.
 
