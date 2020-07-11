@@ -9,8 +9,8 @@ export default {
                 'content-type': 'application/json'
             },
             'data':{
-                'client_id': '3cb085ba1a68cef8af82',
-                'client_secret': 'd983c945203884606985fc1a3c38c20e39b5b317'
+                'client_id': process.env.REACT_APP_GITHUB_CLIENT_ID,
+                'client_secret': process.env.REACT_APP_GITHUB_CLIENT_SECRET
             }
         }),
 
@@ -22,8 +22,8 @@ export default {
                 'content-type': 'application/json'
             },
             'data':{
-                'client_id': '3cb085ba1a68cef8af82',
-                'client_secret': 'd983c945203884606985fc1a3c38c20e39b5b317' 
+                'client_id': process.env.REACT_APP_GITHUB_CLIENT_ID,
+                'client_secret': process.env.REACT_APP_GITHUB_CLIENT_SECRET
             }
         })
 }
